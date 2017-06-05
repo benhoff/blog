@@ -3,3 +3,15 @@ I've already got an adsense account from the youtube account. Apparently there's
 https://support.google.com/adsense/answer/2534771?hl=en&utm_source=aso&utm_medium=link&utm_campaign=ww-ww-et-asfe_
 
 I just entered in my website and then looks like I have to wait? It's 4 July. Will report back later.
+
+Just kidding, suddenly worked. I got some javascript I need to embed. Ok, looks like I need to create my own theme.
+
+(TODO: get permenant link)
+http://docs.getpelican.com/en/3.6.3/themes.html
+
+Looks like the default theme is `notmyidea`. Let's just copy it wholesale into a new default template.
+
+# TODO: mkdir themes/default (-p?)
+# cp -r venv/lib/python3.6/site-packages/pelican/themes/notmyidea/* themes/default
+
+awesome. Google wants it right after the `head` tag, so we'll need to edit `base.html` and add the script there.

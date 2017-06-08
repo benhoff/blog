@@ -11,11 +11,13 @@ A little personal confession: I'm really bad at the command line. And it's not t
 
 One of the little tricks that has saved me is the use of the double exclaimation marks.
 
-`$ pacman -S interesting package`
+`$ pacman -S interesting-package`
 
 `error: you cannot perform this operation unless you are root`
 
-`sudo !!`
+`$sudo !!`
+
+`sudo pacman -S interesting-package`
 
 Using the double exclaimation marks will save you from retyping all of those things. It's saved my sanity many a times.
 
@@ -23,17 +25,17 @@ The one thing I have never looked into is how to search and replace the command.
 
 Until today.
 
-`git comit -m 'really long commit message which should convince me to stop typing these directly into the command line'`
+`$ git comit -m 'really long commit message which should convince me to stop typing these directly into the command line'`
 
-`git: 'comit' is not a git command. Did you mean commit`
+`$ git: 'comit' is not a git command. Did you mean commit`
 Dammit.
 
 the way to fix this? As a vim user this is the syntax that I'll remember.
 
-`!!:s/comit/commit`
+`$ !!:s/comit/commit`
 
 Alternatively,
 
-`^comit^commit^`
+`$ ^comit^commit^`
 
 The next thing I'm going to learn is how to search my bash history. Probably. Maybe.

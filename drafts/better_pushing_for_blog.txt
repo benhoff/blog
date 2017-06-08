@@ -1,0 +1,17 @@
+I need a better way to push the final output pages to the blog. Currently, I'm forcing the `gh-pages` overwriting the master branch of the separate repository to get around the limitations of github page's personal page limits.
+
+I actually edited the makefile to enforce this.
+
+I don't know much about the makefile synatax.
+
+Current deploying uses the command `make github`
+
+This calls the publish command, which specifys the correct publish configuration. It then commits the output directory to the gh-pages branch. Since I'm an individual instead of a user, I then force push the gh-pages branch to the actual benhoff.github.io repo.
+
+If that all sounds hacky, that's because it is.
+
+Although the most interesting thing to come out of it is the git syntax to push a branch to another repo.
+
+I had to add the remote, and labeled it `publish`. I can then push using `git push -f publish gh-pages:master`
+
+It's a weird, weird, hacky setup.

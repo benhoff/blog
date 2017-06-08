@@ -11,6 +11,7 @@ setup(
     packages= find_packages(), # exclude=['docs', 'tests']
     install_requires=[
         'pelican',
+        'ghp-import',
         ],
 
     extras_require={

@@ -21,9 +21,13 @@ Using git to add and push my local repo up to the newly created repository. Visi
 Cool, now that I've got my page up, on to the static website generation. I'll start by installing pelican in a virtual environment.
 
 `mkdir swdev/blog`
+
 `cd swdev/blog`
+
 `python -m venv venv`
+
 `source  venv bin activate`
+
 `pip install pelican`
 
 Pelican has a quick start. Hold my breath here ;)
@@ -69,7 +73,9 @@ http://docs.getpelican.com/en/3.6.3/tips.html
 Ok, not as easy as I would like. We're adventuring now. Pelican recommends the use of `ghp-import`. I hate this kind of adventuring, since I'm pretty sure it's not going to work. Sigh. Here we go.
 
 `pip install ghp-import`
+
 `ghp-import output` # <- this is enough to drive a man crazy
+
 `git push git@github.com:benhoff/benhoff.github.io.git gh-pages:master`
 
 Yea, that didn't work. Looks like since I've already pushed I'm going to have issues. Color me surprised. I swear, this is my surprised face.
@@ -84,7 +90,9 @@ Nope. Now we're just 404ing. Looks like for a user page, content must be in the 
 
 *New repo named `blog`*
 `git remote set-url git@github.com:benhoff/blog.git`
+
 `git remote add publish git@github.com:benhoff/benhoff.github.io`
+
 `git push -f publish gh-pages:master`
 
 I'll still have to manually push the gh-pages branch, but this is good enough for now.

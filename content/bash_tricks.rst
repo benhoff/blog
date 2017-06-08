@@ -12,7 +12,9 @@ A little personal confession: I'm really bad at the command line. And it's not t
 One of the little tricks that has saved me is the use of the double exclaimation marks.
 
 `$ pacman -S interesting package`
+
 `error: you cannot perform this operation unless you are root`
+
 `sudo !!`
 
 Using the double exclaimation marks will save you from retyping all of those things. It's saved my sanity many a times.
@@ -22,6 +24,7 @@ The one thing I have never looked into is how to search and replace the command.
 Until today.
 
 `git comit -m 'really long commit message which should convince me to stop typing these directly into the command line'`
+
 `git: 'comit' is not a git command. Did you mean commit`
 Dammit.
 

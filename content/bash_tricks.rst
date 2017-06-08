@@ -7,9 +7,9 @@ Bash String Subsitution
 :authors: Ben Hoff
 :summary: Learning how to do string subsitution in bash commands
 
-A little personal confession: I'm really bad at the command line. And it's not that I'm just bad, it's that I actively know there's a better way to do it and I often don't.
+A little personal confession: I'm really bad at the command line. And by bad, I mean willfully ignorant. I often know there's a better way to work in the command line and I often don't learn how to do it.
 
-One of the little tricks that has saved me is the use of the double exclaimation marks.
+For example, one of the little tricks that has saved me a lot of time is the use of the double exclaimation marks to redo and edit a command.
 
 `$ pacman -S interesting-package`
 
@@ -19,23 +19,30 @@ One of the little tricks that has saved me is the use of the double exclaimation
 
 `sudo pacman -S interesting-package`
 
-Using the double exclaimation marks will save you from retyping all of those things. It's saved my sanity many a times.
+Using the double exclaimation marks will save you from retyping all of the things when you forget something simple like a sudo. It's saved my sanity many a times.
 
-The one thing I have never looked into is how to search and replace the command.
-
-Until today.
+One example of my willful ignorance, is with misspelling things on the command line'
 
 `$ git comit -m 'really long commit message which should convince me to stop typing these directly into the command line'`
 
 `$ git: 'comit' is not a git command. Did you mean commit`
-Dammit.
 
-the way to fix this? As a vim user this is the syntax that I'll remember.
+Dammit. Up until today, I've pressed the up arrow to bring the command back up, then used the left arrow to navigate all the way back to my mistake before fixing it.
+
+The crazy thing is I know there's a way to do a simple string subsitution. I've just been too lazy to look it up.
+
+Until today. Today, with the use of Google, I become a power user.
+
+As a vim user this is the syntax that I'll remember.
 
 `$ !!:s/comit/commit`
 
-Alternatively,
+Alternatively, if you've invested in a saner text editor, a simplier syntax is:
 
 `$ ^comit^commit^`
 
-The next thing I'm going to learn is how to search my bash history. Probably. Maybe.
+Now, if only I could remember the way to navigate to the beginning of a command line (`Ctl-e?`.... `Ctl-a?`)
+
+or learn how to use my bash history....
+
+Well there's always tomorrow.

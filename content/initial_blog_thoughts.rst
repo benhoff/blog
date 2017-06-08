@@ -30,7 +30,7 @@ A quick google search shows that Pelican is likely the largest/most supported py
 
 Tech to be implemented later (third party and potentially hard)
 
-- Disqus (comments)
+- Discourse (comments)
 - Google Analytics (analytics)
 
 Aweomse, let's start implementing.

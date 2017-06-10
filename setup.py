@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="blog",
-    version=verstr,
+    version='0.0.1',
     description='blog',
     url='https://github.com/benhoff/vexbot',
     license='GPL3',
@@ -16,5 +16,6 @@ setup(
 
     extras_require={
         'dev': ['flake8', 'twine'],
+        'vim': ['jedi',],
     }
 )

@@ -8,9 +8,6 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-GITHUB_PAGES_BRANCH=gh-pages
-GITHUB_PAGE_PUSH='gh-pages:master'
-
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
 	PELICANOPTS += -D
@@ -81,6 +78,6 @@ github: publish
 	cd $(OUTPUTDIR)
 	git add -A
 	git commit -m 'Update website'
-	git push
+	git push origin master
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish github

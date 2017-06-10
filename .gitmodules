@@ -1,3 +1,6 @@
 [submodule "plugins/ipynb"]
 	path = plugins/ipynb
 	url = git://github.com/danielfrg/pelican-ipynb.git
+[submodule "output"]
+	path = output
+	url = git@github.com:benhoff/benhoff.github.io.git

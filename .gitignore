@@ -67,5 +67,3 @@ target/
 
 # SublimeLinter config file
 .sublimelinterrc
-
-output

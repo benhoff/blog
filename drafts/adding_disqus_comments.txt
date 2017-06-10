@@ -1,7 +1,0 @@
-Adding disqus comments turned out to be really easy. I was concerened that added google ads and using disqus as free might be in conflict (and in fact, it still might be), but some casual google research suggests that it's fine.
-
-Better to ask for forgivness rather than permission.
-
-1) create your own site
-2) uncomment and add in the string
-3) change the publishing means to using `make publish` in the source directory.

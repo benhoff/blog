@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
 
 AUTHOR = 'Ben Hoff'
 SITENAME = "Ben's Blog"
@@ -20,13 +19,12 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 THEME = 'themes/base_theme'
 
-"""
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
-"""
+LINKS = (('Github', 'https://github.com/benhoff'),
+         ('Community', 'https://community.benhoff.net'),)
 
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
+
+MENUITEMS = [('Archives', '%s/archives.html' % SITEURL)]

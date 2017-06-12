@@ -48,7 +48,7 @@ Looks like I just keep adding these to the custom resource records.
 
 I added email.mg CNAME to point to mailgun.org, and a krs._domainkey.mg to point to a really long string. By clicking the authorize, looks like everything worked.
 
-Allright, back to the discourse setup.
+All right, back to the discourse setup.
 
 I'll launch the setup tool. Setup wants to create a 2 gig swap file. Fine by me. Following the defaults for mailgun set by: https://github.com/discourse/discourse/blob/master/docs/INSTALL-email.md
 

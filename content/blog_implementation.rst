@@ -8,7 +8,7 @@ Blog Implementation Stream of Conscious
 :authors: Ben Hoff
 :summary: Starting implementation of the blog as a work in progress.
 
-Allright, let's start implementing a blog.
+All right, let's start implementing a blog.
 
 First off, let's get the Github Pages up first.
 
@@ -42,7 +42,7 @@ Awesome, the quickstart dumped a bunch of new files and folders into the directo
 
 `mv initial_blog_thoughts.txt content/initial_blog_thoughts.rst`
 
-I'm following along here (TODO: get permenant link)
+I'm following along here (TODO: get permanent link)
 
 http://docs.getpelican.com/en/3.6.3/content.html
 
@@ -58,7 +58,7 @@ Uh, I thought I could create an `index.html`? Doesn't look like I can, I'll just
 
 `pelican /path/to/my/content`
 
-Looks like the content needs to be the file directory and not the acutal content.
+Looks like the content needs to be the file directory and not the actual content.
 
 Nice, the output directory has an index file in it already. Let's check it out using my browser.
 

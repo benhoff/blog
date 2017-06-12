@@ -10,7 +10,7 @@ Blog Tech Stack
 As I'm looking to start up a mailing service I thought it be interesting to talk about the services I'm using for hosting this blog. I'll do it in cronological order. Kind of.
 
 +---------------------------+---------------------------------------------------+
-| Service Type              | Provider                                          | 
+| Service Type              | Software/Provider                                 | 
 +===========================+===================================================+
 | Static Site Generator     | `Pelcian <https://blog.getpelican.com/>`_         |
 +---------------------------+---------------------------------------------------+

@@ -20,11 +20,13 @@ AUTHOR_FEED_RSS = None
 THEME = 'themes/base_theme'
 
 LINKS = (('Github', 'https://github.com/benhoff'),
-         ('Community', 'https://community.benhoff.net'),)
+         ('Community', 'https://community.benhoff.net'),
+         ('Youtube', 'https://www.youtube.com/channel/UChWbNrHQHvKK6paclLp7WYw'),)
 
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
-MENUITEMS = [('Archives', '%s/archives.html' % SITEURL)]
+MENUITEMS = [('Archives', '%s/archives.html' % SITEURL),
+             ('Community', 'https:community.benhoff.net')]

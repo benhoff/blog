@@ -27,7 +27,5 @@ As I'm looking to start up a mailing service I thought it be interesting to talk
 | Mailing List              | `Mailchimp <https://mailchimp.com/>`_             |
 +---------------------------+---------------------------------------------------+
 
-I'll try to add here as things change.
-
 .. [1] Used for hosting the discourse instance
 .. [2] Transactional email is, according to `Mailchimp's Docs <https://blog.mailchimp.com/what-is-transactional-email/>`_, an email sent to an individual based on some action. Discourse uses it for signups, which is why I needed it.

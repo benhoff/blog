@@ -5,7 +5,7 @@ My name is Ben Hoff. This is my blog.
 
 My plan is to work on several tutorials, including an extensive PyQt tutorial.
 
-My main programming language is Python. I also know C++ although I don't program it often.
+My main programming language is Python. I also know C++, although I don't program it often.
 
 I used to program live a lot. You can check out my channel_ if you'd like.
 

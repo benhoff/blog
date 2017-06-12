@@ -19,8 +19,8 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 THEME = 'themes/base_theme'
 
-LINKS = (('Github', 'https://github.com/benhoff'),
-         ('Community', 'https://community.benhoff.net'),
+LINKS = (('Community', 'https://community.benhoff.net'),
+         ('Github', 'https://github.com/benhoff'),
          ('Youtube', 'https://www.youtube.com/channel/UChWbNrHQHvKK6paclLp7WYw'),)
 
 DEFAULT_PAGINATION = 10
@@ -30,3 +30,6 @@ RELATIVE_URLS = True
 
 MENUITEMS = [('Archives', '%s/archives.html' % SITEURL),
              ('Community', 'https:community.benhoff.net')]
+
+STATIC_PATHS = ['extra/CNAME',]
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}

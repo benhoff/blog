@@ -24,7 +24,7 @@ As I'm looking to start up a mailing service I thought it be interesting to talk
 +---------------------------+---------------------------------------------------+
 | Transactional Email [2]_  | `Mailgun <https://www.mailgun.com/>`_             |
 +---------------------------+---------------------------------------------------+
-| Maiiling List             | `Mailchimp <https://mailchimp.com/>`_             |
+| Mailing List             | `Mailchimp <https://mailchimp.com/>`_             |
 +---------------------------+---------------------------------------------------+
 
 I'll try to add here as things change.

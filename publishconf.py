@@ -21,4 +21,3 @@ DELETE_OUTPUT_DIRECTORY = True
 # Following items are often useful when publishing
 
 GOOGLE_ANALYTICS = "UA-100747808-1"
-GITHUB_URL = "http://github.com/benhoff/blog"

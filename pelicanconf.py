@@ -28,3 +28,4 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 MENUITEMS = [('Archives', '%s/archives.html' % SITEURL)]
+TYPOGRIFY = True

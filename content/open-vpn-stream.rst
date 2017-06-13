@@ -67,9 +67,10 @@ Actually looks like my dd just didn't terminate correctly.
 You'll want to seek and skip. The output of should look something like this.
 
 .. code-block:: console
-6963200+0 records in
-6963200+0 records out
-3565158400 bytes (3.6 GB, 3.3 GiB) copied, 732.023 s, 4.9 MB/s
+
+    6963200+0 records in
+    6963200+0 records out
+    3565158400 bytes (3.6 GB, 3.3 GiB) copied, 732.023 s, 4.9 MB/s
 
 you'll want to use the records as the type.
 

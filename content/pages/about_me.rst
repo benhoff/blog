@@ -3,7 +3,9 @@ About Me
 
 My name is Ben Hoff. This is my blog.
 
-My plan is to work on several tutorials, including an extensive PyQt tutorial.
+I graduated from the United States Air Force Academy with a bachelor's in Mechanical Engineering, and I've been programming since 2013.
+
+My plan for this blog is to work on several tutorials, including an extensive PyQt tutorial.
 
 My main programming language is Python. I also know C++, although I don't program it often.
 

@@ -4,7 +4,6 @@ Adding Discourse Comments
 :date: 2017-06-10 14:25
 :category: blog
 :slug: adding-discourse-comments
-:authors: Ben Hoff
 :summary: Working through adding Discourse Comments to the blog.
 
 Alright, here we go. Let's add comments to my static site. I waited until the weekend because I knew it was going to be a pain.

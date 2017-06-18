@@ -4,7 +4,6 @@ Setup Mailgun with Google Domain
 :date: 2017-06-12 20:20
 :category: random
 :slug: setup-mailgun-with-google-domain
-:authors: Ben Hoff
 :summary: Setting up the DNS configuration of Mailgun for Google Domain
 :status: draft
 

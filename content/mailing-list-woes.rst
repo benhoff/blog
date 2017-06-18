@@ -4,7 +4,6 @@ Mailing List Woes
 :date: 2017-06-12 16:01
 :category: blog
 :slug: mailing-list-woes
-:authors: Ben Hoff
 :summary: Figuring out how to add a mailing list.
 
 

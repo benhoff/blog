@@ -4,7 +4,6 @@ Flashing Beaglebone Black
 :date: 2017-06-12 19:51
 :category: random
 :slug: flashing-beaglebone-black
-:authors: Ben Hoff
 :summary: Trails and tribulations of trying to bring a Beaglebone black up to the latest kernel.
 
 

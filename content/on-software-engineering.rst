@@ -4,7 +4,6 @@ Software Engineering
 :date: 2017-06-15 09:05
 :category: random
 :slug: on-software-engineering
-:authors: Ben Hoff
 :summary: Hiring differences between being a Software Engineer and Computer Scientist
 
 The other day, I ran into the idea of `The Programmer Competency Matrix`_. Which as I scrolled through the various categories and read the various rows I realized: Wow. I am not very competent. 

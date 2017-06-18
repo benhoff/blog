@@ -5,7 +5,6 @@ Blog Implementation Stream of Conscious
 :tags: blog, implementation
 :category: blog
 :slug: blog-implementation
-:authors: Ben Hoff
 :summary: Starting implementation of the blog as a work in progress.
 
 All right, let's start implementing a blog.

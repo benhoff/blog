@@ -6,7 +6,6 @@ Blog Initial Tech Stack Thoughts
 :tags: blog, tech, stack
 :category: blog
 :slug: blog-tech-stack-thoughts
-:authors: Ben Hoff
 :summary: Walking through the initial tech stack considerations for a new blog.
 
 Ok, let's start a blog.

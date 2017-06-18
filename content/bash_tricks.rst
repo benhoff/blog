@@ -4,7 +4,6 @@ Bash String Subsitution
 :date: 2017-06-08 13:19
 :category: random
 :slug: bash-string-substitution
-:authors: Ben Hoff
 :summary: Learning how to do string substitution in bash commands
 
 A little personal confession: I'm really bad at the command line. And by bad, I mean willfully ignorant. I often know there's a better way to work in the command line and I often don't learn how to do it.

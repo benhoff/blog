@@ -4,7 +4,6 @@ Fixing My Issue With Github Stars
 :date: 2017-06-09 08:11
 :category: random
 :slug: remembering-github-stars
-:authors: Ben Hoff
 :summary: How I fixed a long term issue with how I star repositories on Github
 
 I’ve got this weird problem.

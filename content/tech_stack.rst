@@ -4,7 +4,6 @@ Blog Tech Stack
 :date: 2017-06-12 08:34
 :category: blog
 :slug: blog-tech-stack
-:authors: Ben Hoff
 :summary: Reviewing the tech stack and hosting services I'm using for the blog.
 
 As I'm looking to start up a mailing service I thought it be interesting to talk about the services I'm using for hosting this blog. I'll do it in chronological order. Kind of.

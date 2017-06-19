@@ -75,9 +75,7 @@ publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 github: publish
-	cd $(OUTPUTDIR)
-	git add -A
-	git commit -m 'Update website'
-	git push origin master
+	ghp-import output
+	git push -f publish gh-pages:master
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish github

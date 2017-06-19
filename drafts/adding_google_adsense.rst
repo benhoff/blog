@@ -19,3 +19,5 @@ awesome. Google wants it right after the `head` tag, so we'll need to edit `base
 Looks like there's some cool templating things that we can do, looking at the google html template. However, since I'm not planning on distributing this, (the template is only for this site), let's just whole scale copying, or a concrete implementation.
 
 Looks like that's all that's needed. I'll verify in a couple of days (Google says it can take up to three) and then come back and revisit this.
+
+https://support.google.com/adsense/answer/1348695?hl=en

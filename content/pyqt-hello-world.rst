@@ -116,8 +116,6 @@ That's it! You should see a small window open up. We've got the "Hello World" ve
 
 Next time, we'll talk about some choices for our central widget design.
 
-.. Reference for next post: https://richnewman.wordpress.com/category/tabbed-document-interface/
-
 .. _QApplication: http://doc.qt.io/qt-5/qapplication.html
 .. _QMainWindow: http://doc.qt.io/qt-5/qmainwindow.html
 .. _`documentation is awesome`: http://doc.qt.io/qt-5/qmainwindow.html#details

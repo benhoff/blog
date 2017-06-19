@@ -19,6 +19,8 @@ So during this post, we're going to go over some of the major client-side types 
 
 Up front disclaimer, the libraries I'm going to discuss are all Python libraries. However, if you're programming in any other language, you should be able to Google ``java tui library`` for example and come up with similar libraries in your preferred language.
 
+.. contents::
+
 Command Line Interfaces
 -----------------------
 

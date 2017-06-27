@@ -15,8 +15,8 @@ Alright, this is top level index showing how to follow the PyQt Tutorial. Feel f
 
 .. contents:: 
 
-  `hello world`_
-  `interface design`_
+`hello world`
+`interface design`
 
-.. _`hello world`: {filename}/pyqt-hello-world
-.. _`interface design`: {filename}/qt-interface-design
+.. `hello world`: {filename}/pyqt-hello-world
+.. `interface design`: {filename}/qt-interface-design

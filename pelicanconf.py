@@ -32,5 +32,6 @@ MENUITEMS = [('Archives', '%s/archives.html' % SITEURL),
              ('Community', 'https:community.benhoff.net')]
 
 TYPOGRIFY = True
-STATIC_PATHS = ['extra/CNAME', 'images']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+STATIC_PATHS = ['extra/CNAME', 'images', 'extra/favicon.ico']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
+                       'extra/favicon.ico': {'path': 'favicon.ico'}}

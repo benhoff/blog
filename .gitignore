@@ -1,5 +1,8 @@
 output
 
+# jupyter notebook
+.ipynb_checkpoints
+
 # Generic files to ignore
 *~
 *.lock

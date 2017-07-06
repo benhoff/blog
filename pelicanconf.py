@@ -35,3 +35,10 @@ TYPOGRIFY = True
 STATIC_PATHS = ['extra/CNAME', 'images', 'extra/favicon.ico']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
                        'extra/favicon.ico': {'path': 'favicon.ico'}}
+
+
+# pelican-ipynb settings
+MARKUP = ('md', 'ipynb')
+PLUGIN_PATHS=['plugins',]
+PLUGINS = ['ipynb.markup']
+IGNORE_FILES = ['.ipynb_checkpoints']

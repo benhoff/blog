@@ -12,6 +12,9 @@ setup(
     install_requires=[
         'pelican',
         'typogrify',
+        'jupyter',
+        'requests',
+        'pandas'
         ],
 
     extras_require={

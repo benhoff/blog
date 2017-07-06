@@ -114,8 +114,9 @@ So now that we now a little bit about what we're doing, let's write the rest of 
 
 That's it! You should see a small window open up. We've got the "Hello World" version for GUI programming.
 
-Next time, we'll talk about some choices for our central widget design.
+Now, let's talk about `some choices for our central widget design`_.
 
+.. _`some choices for our central widget design`: {filename}/qt-interface-design.rst
 .. _QApplication: http://doc.qt.io/qt-5/qapplication.html
 .. _QMainWindow: http://doc.qt.io/qt-5/qmainwindow.html
 .. _`documentation is awesome`: http://doc.qt.io/qt-5/qmainwindow.html#details

@@ -13,8 +13,7 @@ setup(
         'pelican',
         'typogrify',
         'jupyter',
-        'requests',
-        'pandas'
+        'Markdown',
         ],
 
     extras_require={

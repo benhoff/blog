@@ -4,7 +4,7 @@ setup(
     name="blog",
     version='0.0.1',
     description='blog',
-    url='https://github.com/benhoff/vexbot',
+    url='https://github.com/benhoff/blog',
     license='GPL3',
     author='Ben Hoff',
     author_email='beohoff@gmail.com',

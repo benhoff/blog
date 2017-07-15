@@ -3,7 +3,7 @@ Blog Implementation Stream of Conscious
 
 :date: 2017-06-04 21:27
 :tags: blog, implementation
-:category: blog
+:category: Blog
 :slug: blog-implementation
 :summary: Starting implementation of the blog as a work in progress.
 

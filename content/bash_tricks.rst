@@ -2,7 +2,7 @@ Bash String Subsitution
 #######################
 
 :date: 2017-06-08 13:19
-:category: random
+:category: Random
 :slug: bash-string-substitution
 :summary: Learning how to do string substitution in bash commands
 

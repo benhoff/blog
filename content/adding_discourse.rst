@@ -2,7 +2,7 @@ Adding Discourse Comments
 #########################
 
 :date: 2017-06-10 14:25
-:category: blog
+:category: Blog
 :slug: adding-discourse-comments
 :summary: Working through adding Discourse Comments to the blog.
 

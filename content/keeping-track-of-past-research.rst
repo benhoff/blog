@@ -3,7 +3,7 @@ Keeping Track of Past Research
 ##############################
 
 :date: 2017-06-27 17:07
-:category: random
+:category: Random
 :slug: keeping-track-of-past-research
 :summary: Reviewing multiple methods of keeping track of past research
 

@@ -2,7 +2,7 @@ Flashing Beaglebone Black
 #########################
 
 :date: 2017-06-12 19:51
-:category: random
+:category: Random
 :slug: flashing-beaglebone-black
 :summary: Trails and tribulations of trying to bring a Beaglebone black up to the latest kernel.
 

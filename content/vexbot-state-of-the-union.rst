@@ -3,7 +3,7 @@ Vexbot State of the Union
 #########################
 
 :date: 2017-07-01 16:30
-:category: random
+:category: Random
 :slug: vexbot-state-of-the-union
 
 All right, let's talk about Vexbot_.

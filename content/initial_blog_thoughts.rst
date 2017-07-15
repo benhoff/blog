@@ -4,7 +4,7 @@ Blog Initial Tech Stack Thoughts
 :date: 2017-06-04 20:30
 :modified: 2017-06-04 20:35
 :tags: blog, tech, stack
-:category: blog
+:category: Blog
 :slug: blog-tech-stack-thoughts
 :summary: Walking through the initial tech stack considerations for a new blog.
 

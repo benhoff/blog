@@ -1,6 +1,6 @@
 title: Visualizing Youtube Ego Network Using Networkx
 slug: youtube-ego-network
 date: 2017-07-12 22:08
-category: random
+category: Random
 summary: Graphing an Ego Network using subscribers and everyone that they are subscribing to.
 

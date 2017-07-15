@@ -2,7 +2,7 @@ Blog Tech Stack
 ###############
 
 :date: 2017-06-12 08:34
-:category: blog
+:category: Blog
 :slug: blog-tech-stack
 :summary: Reviewing the tech stack and hosting services I'm using for the blog.
 

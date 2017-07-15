@@ -3,7 +3,7 @@ Types of Programs
 #################
 
 :date: 2017-06-17 22:01
-:category: random
+:category: Random
 :slug: types-of-programs
 :summary: Experienced programmers know one thing beginner programmers don't: types of programs.
 

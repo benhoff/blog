@@ -2,7 +2,7 @@ Mailing List Woes
 #################
 
 :date: 2017-06-12 16:01
-:category: blog
+:category: Blog
 :slug: mailing-list-woes
 :summary: Figuring out how to add a mailing list.
 

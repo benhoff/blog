@@ -2,7 +2,7 @@ Software Engineering
 ####################
 
 :date: 2017-06-15 09:05
-:category: random
+:category: Random
 :slug: on-software-engineering
 :summary: Hiring differences between being a Software Engineer and Computer Scientist
 

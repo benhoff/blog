@@ -40,5 +40,8 @@ EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
 # pelican-ipynb settings
 MARKUP = ('md', 'ipynb')
 PLUGIN_PATHS=['plugins',]
-PLUGINS = ['ipynb.markup']
+PLUGINS = ['ipynb.markup', 'sitemap']
 IGNORE_FILES = ['.ipynb_checkpoints']
+
+SITEMAP = {'exclude': ['tag/',],
+           'format': 'xml'}

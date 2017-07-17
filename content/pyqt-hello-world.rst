@@ -99,7 +99,7 @@ So now that we now a little bit about what we're doing, let's write the rest of 
   def main():
       # We need to make the QApplication before our QMainWindow
       # We also need to pass in our system argument values (sys.argv)
-      app = QtCore.QApplication(sys.argv)
+      app = QtWidgets.QApplication(sys.argv)
       main_window = QtWidgets.QMainWindow()
       # QMainWindow requires a central widget, so we'll just pass in a 
       # blank widget for now

@@ -2,6 +2,8 @@
 Privacy Policy
 ##############
 
+:status: hidden
+
 What information do we collect?
 -------------------------------
 

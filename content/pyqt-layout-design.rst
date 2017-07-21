@@ -140,9 +140,10 @@ Below, you can see the change in the appearance of our GUI with the above layout
 
 So you can start to see how using layouts can be a valuable way to add more widgets to our GUI.
 
-There's only one problem. If we click that push button, nothing happens. What's up with that? Tune in next time, where we'll learn to fix that issue using Signals and Slots.
+There's only one problem. If we click that push button, nothing happens. What's up with that? Well we need to connect our signals and slots together. Check out how to do that, in the `Signals and Slots`_ post.
 
 .. _`check it out`: http://doc.qt.io/qt-5/layout.html
 .. _`Hello World`: {filename}/pyqt-hello-world.rst
 .. _`Interface Design`: {filename}/qt-interface-design.rst
 .. _`this blog post`: {filename}/face-detection-in-pyqt.rst
+.. _`Signals and Slots`: {filename}/pyqt-signals-slots.rst

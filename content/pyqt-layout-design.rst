@@ -22,7 +22,7 @@ And then we'll import it into our program.
 
   from facerecog import MainWidget, get_haarcascade_filepath
 
-If you're interested in seeing the coding going on behind this, feel free to explore it in `this blog post`_. Otherwise, let's instantiate it and put it in our program.
+If you're interested in seeing the coding going on behind the face recognition piece, feel free to explore it in `this blog post`_. Otherwise, let's instantiate our face recognition widget and put it in our program.
 
 .. code-block:: python
   
@@ -55,17 +55,17 @@ If you're interested in seeing the coding going on behind this, feel free to exp
 
 .. image:: {filename}/images/face-recognition-success.png
 
-Obviously this isn't the whole story. But it demonstrates an important piece about Qt. Everything that the user interacts with is a widget. In this case, we have a ready made widget that we can plug into our ``MainWindow``. So our end goal as GUI designers (for the most part) will be to design widgets. Or at least, all of the design will roll up into a widegt. So where do we go from here?
+Obviously this code isn't the whole story to the GUI development. But it demonstrates an important fact about Qt desktop GUI framework. Everything that the end user interfaces with is a widget. So in this case, since we already have a ready made widget, we can plug it in and send our user on their merry way.
 
-Well, as we talked about in the Hello World blog post, we can add in some functionality of a menu bar, status bar, dock widgets, etc. And we'll totally get to that later.
+The end goal for most of our interface design then using the Qt framework will be to wrap our interface into widgets. So how do we do that?
+
+Well, as we talked about in the Hello World blog post, we can add in some functionality of a menu bar, status bar, dock widgets, etc.
 
 .. image:: http://doc.qt.io/qt-5/images/mainwindowlayout.png
 
-But first we want to understand how Qt places things. So we're going to talk about Layout Management.
+But most of the time what we want to do is group, or layout, multiple widgets in an area. The way to do that in Qt is through Layout Management.
 
-All QWidget classes can use layouts to manage their subwidgets. Additionally, as the Qt Documentation says, Qt's layout classes were designed for hand-written code.
-
-A couple of things as mentioned in the documentation that the layouts can do:
+All QWidget classes use layouts to manage the life cycle of their subwidgets. In addition to managing the life cycle, ayouts also:
 
 * Positioning of child widgets.
 * Sensible default sizes for windows.
@@ -78,11 +78,7 @@ A couple of things as mentioned in the documentation that the layouts can do:
   * Hiding or showing a child widget.
   * Removal of child widgets.
 
-Now to be clear, the Qt Documentation does an better job then I will of explaining the in's and out's of layout management, so I'd recommend you `check it out`_.
-
-We'll be going through the basics here though.
-
-So let's add some widgets to a layout so that we get a feel for how this works.
+Now to be clear, the Qt Documentation does an better job then I will of explaining the in's and out's of layout management, so I'd recommend you `check it out`_. But we'll go through the basics here of instantiating, using and setting layouts here.
 
 First we need a master widget that we can set the layout on.
 
@@ -98,7 +94,7 @@ Then we need to pick which layout that we want to use.
 
 Some of my favorite layouts include ``QHBoxLayout`` which arranges widgets horizontally, ``QVBoxLayout``, which arranges widgets vertically, and ``QGridLayout`` which allows you to put things in a grid.
 
-Let's use a layout to stack a couple of widgets on top of each other. We'll then set the layout that we just created to be the layout for our master widget.
+Let's use a layout to stack a couple of widgets on top of each other. We'll do this using the ``addWidget`` function on our instantiated layout. Once we've added all of the widgets that we want, we'll then set the layout using the ``setLayout`` method on our ``MasterWidget`` class.
 
 .. code-block:: python
 

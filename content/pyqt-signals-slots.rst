@@ -13,7 +13,7 @@ In order to achieve that goal, we're going to have to learn about signals and sl
 
 Let me let you in on a little secret. Signals and slots? They're magical. Seriously, they are pretty cool.
 
-Let's go back to our face recognition example. This time since we `know layouts`, we're going to build our own widget so that we can better hook up our signals and slots.
+Let's go back to our face recognition example. This time since we know layouts due to the `layout management`_ post, we're going to build our own widget so that we can better hook up our signals and slots.
 
 This is going to track closely to the `face detection post`_ where I originally created this widget.
 

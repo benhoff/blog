@@ -16,8 +16,10 @@ Article                Description
 `Interface Design`_    Review the three major types of Interfaces.
 `Layout Mangement`_    Hands on approach how to create Interfaces using
                        layouts in Qt.
+`Signals and Slots`_   Overview of signals and slots
 =====================  ================================================
 
 .. _`Hello World`: {filename}/pyqt-hello-world
 .. _`Interface Design`: {filename}/qt-interface-design
 .. _`Layout Mangement`: {filename}/pyqt-layout-design.rst
+.. _`Signals and Slots`: {filename}/pyqt-signals-slots.rst

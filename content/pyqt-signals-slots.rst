@@ -20,9 +20,9 @@ This is going to track closely to the `face detection post`_ where I originally 
 .. code-block:: python
 
   from PyQt5 import QtCore, QtWidgets
-  from reacerecog import (RecordVideo,
-                          FaceDetectionWidget,
-                          get_haarcascade_filepath)
+  from facerecog import (RecordVideo,
+                         FaceDetectionWidget,
+                         get_haarcascade_filepath)
 
   class FaceRecogControl(QtWidgets.QWidget):
       def __init__(self, parent=None):

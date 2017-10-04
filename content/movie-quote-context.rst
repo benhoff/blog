@@ -24,6 +24,7 @@ I ran this in tmux on a digital ocean instance I have running for 12 hours. You 
 Man, that 'Remind me!' bot is popular.
 
 .. code-block:: python
+
     import praw
     from Levenshtein import ratio
 

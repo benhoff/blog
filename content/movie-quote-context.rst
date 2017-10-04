@@ -19,7 +19,7 @@ From a technology standpoint, this was a relatively easy problem to solve. I'm u
 
 The plan was to grab all of the parent comment's text if there was a match that was good close to any of the my movie quotes. But like I said, there's not enough data being returned from grabbing live comments to make this feasible. 
 
-I ran this in tmux on a digital ocean instance I have running for 12 hours. You could also have this write to a file as well. I turned off the similarity matching and have just been watching the raw text come in while I write this bot.
+I ran this in tmux on a digital ocean instance I have running for 12 hours. You could also have this write to a file as well. I turned off the similarity matching and have just been watching the raw text come in while I write this post.
 
 Man, that 'Remind me!' bot is popular.
 

@@ -24,7 +24,7 @@ Sure enough, you can definitely do it. Using the `interact` method from the `cod
   data = [[{}, {}, {}], [{}, {}], [{}, {}, {}, {}]]
   for value in data:
       for deeper_value in value:
-          interact(locals())
+          interact(local=locals())
 
 Dropping into the REPL like this gives me the ability to query `deeper_value` interactively. This is often useful when dealing with JSON to figure out what keys are available.
 

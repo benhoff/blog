@@ -13,7 +13,7 @@ Several hours of research later and pinging a project maintainer to bump the ver
 
 It's actual not too bad once you know how to do it.
 
-In your `setup` method you need to have two arguments.
+In the `setup` method of `setup.py` you need to have two arguments.
 
 - install_requires
 - dependency_links
@@ -34,12 +34,13 @@ This requirement parsing will currently fail due to the fact there isn't a promp
 
 There's a couple of special things about the way this link is written that are poorly documented that is worth writing about.
 
-1. `git+https://github.com/jonathanslenders/python-prompt-toolkit` is a standard documented way to install git links using pip.
+1. `git+https://github.com/jonathanslenders/python-prompt-toolkit` -> This is a standard documented way to install git links using pip.
 2. The `@2.0` specifies the branch that we want to use. Note that this happens to be a number in this case, but can be whatever branch you need. I.e., `dev`
-3. The `#egg=prompt-toolkit-2.0.0` is the most important bit. 
+3. The `#egg=prompt-toolkit-2.0.0` is the most important bit and worth talking about a little more.
 
-First all, we specify which package this dependency provides with the `#egg=prompt-toolkit` piece.
-The most important part of it that isn't documented anywhere is that you *must* provide a version number. I did this here with the `-2.0.0`. The string can be anything, but it must be there.
+First all, we specify which package this dependency link provides. We do this with the `#egg=prompt-toolkit` portion of the string. In this case, this dependency link provides the package `prompt-toolkit`
+
+But the most important part of this portion of a dependency link, and one that isn't documented at all, is that you *must* provide a version number. I've done this here with the `-2.0.0`. The version number you provide can be any version, but it must be there.
 
 So for example, if you wanted to specify a dependency on the development version of Vexbot, the dependency link could look like this:
 

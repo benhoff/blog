@@ -4,7 +4,7 @@ Using Git Branches With Setuptools
 
 :date: 2017-12-28
 :category: Random
-:slug: using-get-branches-with-setuptools
+:slug: using-git-branches-with-setuptools
 :summary: Want to specify a git dependency in a setup.py? Here's how.
 
 I wanted to add a git branch in a dependency for a project of mine in the `setup.py` file. Should be easy right?

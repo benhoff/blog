@@ -19,6 +19,6 @@ setup(
     extras_require={
         'dev': ['flake8', 'twine'],
         'vim': ['jedi',],
-        'push': ['ghp-import'],
+        'push': ['ghp-import', 'wheel'],
     }
 )

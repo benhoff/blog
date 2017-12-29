@@ -111,7 +111,7 @@ So now that we now a little bit about what we're doing, let's write the rest of 
 
 That's it! You should see a small window open up. We've got the "Hello World" version for GUI programming.
 
-The next step is to talk about `choices for our central widget design`_, but if you're an advanced PyQt programmer already, you can checkout `this high level overview` of the tutorial series to jump around to the topic you need.
+The next step is to talk about `choices for our central widget design`_, but if you're an advanced PyQt programmer already, you can checkout `this high level overview`_ of the tutorial series to jump around to the topic you need.
 
 .. _`choices for our central widget design`: {filename}/qt-interface-design.rst
 .. _QApplication: http://doc.qt.io/qt-5/qapplication.html

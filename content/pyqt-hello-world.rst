@@ -113,7 +113,7 @@ That's it! You should see a small window open up. We've got the "Hello World" ve
 
 The next step is to talk about `choices for our central widget design`_, but if you're an advanced PyQt programmer already, you can checkout `this high level overview` of the tutorial series to jump around to the topic you need.
 
-.. _`some choices for our central widget design`: {filename}/qt-interface-design.rst
+.. _`choices for our central widget design`: {filename}/qt-interface-design.rst
 .. _QApplication: http://doc.qt.io/qt-5/qapplication.html
 .. _QMainWindow: http://doc.qt.io/qt-5/qmainwindow.html
 .. _`documentation is awesome`: http://doc.qt.io/qt-5/qmainwindow.html#details
@@ -122,4 +122,4 @@ The next step is to talk about `choices for our central widget design`_, but if 
 .. _`Python 2`: https://pythonclock.org/
 .. _`turn to Google`: https://stackoverflow.com/questions/6318156/adding-python-path-on-windows-7
 .. _`at this link`: https://github.com/benhoff/blog/blob/master/scripts/pyqt-hello-world.py
-.. __`this high level overview`: {filename}/pyqt-tutorial.rst
+.. _`this high level overview`: {filename}/pyqt-tutorial.rst

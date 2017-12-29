@@ -19,7 +19,7 @@ Article                Description
 `Signals and Slots`_   Overview of signals and slots
 =====================  ================================================
 
-.. _`Hello World`: {filename}/pyqt-hello-world
-.. _`Interface Design`: {filename}/qt-interface-design
+.. _`Hello World`: {filename}/pyqt-hello-world.rst
+.. _`Interface Design`: {filename}/qt-interface-design.rst
 .. _`Layout Mangement`: {filename}/pyqt-layout-design.rst
 .. _`Signals and Slots`: {filename}/pyqt-signals-slots.rst

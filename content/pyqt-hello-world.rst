@@ -6,8 +6,6 @@ PyQt Hello World Application
 :category: PyQt
 :summary: Creating the hello world app of desktop applications.
 
-.. contents::
-
 Getting Started
 ---------------
 
@@ -24,7 +22,6 @@ If you're running a linux distribution, you can likely use your native package m
 
 Make sure if you're running Windows that you add Python to your path library. It should be a pop-up option during the install. If you mess up, `turn to Google`.
 
-
 Make sure you install Python 3. This tutorial will not be for `Python 2`_ as Python 2 is reaching it's end of life for official support.
 
 
@@ -36,13 +33,13 @@ Create a directory you want to work out of.
 .. code-block:: console
 
   $ mkdir pyqt
-  $ chdir pyqt
+  $ cd pyqt
 
 
 Create Virtual Environment
 --------------------------
 
-We're going to create and activate a virtual environment, so that your global site-packages stays clean. Hard to keep track of which project, installed which dependencies, otherwise.
+We're going to create and activate a virtual environment, so that your global site-packages stay clean. Hard to keep track of which project, installed which dependencies, otherwise.
 
 .. code-block:: console
 
@@ -56,12 +53,12 @@ Right, now that our virtual environment is activated, let's install PyQt.
 
 .. code-block:: console
 
-        (venv) $ pip install PyQt5
+        $ pip install PyQt5
 
 Write Boilerplate Code
 ----------------------
 
-Now, fire up your favorite text editor, it's time to start programming. We'll create a file name *__main__.py* practice a couple of nicety's: the creation of a main loop, and a standard script sequence
+Now, fire up your favorite text editor, it's time to start programming. We'll create a file name `__main__.py` practice a couple of nicety's: the creation of a main loop, and a standard script sequence
 
 .. code-block:: python
 
@@ -76,7 +73,7 @@ Now, fire up your favorite text editor, it's time to start programming. We'll cr
 Write PyQt Specific Code
 ------------------------
 
-Now, in our main function, we're going to create an instances of `QApplication`_ and `QMainWindow`_. I'd recommend reading the documentation_ on ``QApplication``, especially the section with the *main areas of responsibility*. The TLDR on ``QApplication`` responsibilities:
+Now, in our main function, we're going to create an instances of `QApplication`_ and `QMainWindow`_. I'd recommend reading the `documentation`_ on ``QApplication``, especially the section with the *main areas of responsibility*. The TLDR on ``QApplication`` responsibilities:
 
 - event handling
 - main settings
@@ -87,7 +84,7 @@ Now, in our main function, we're going to create an instances of `QApplication`_
 
   Notice that the Menu Bar and Status Bar are tied to QMainWindow. We'll come back to that.
 
-So now that we now a little bit about what we're doing, let's write the rest of the code.
+So now that we now a little bit about what we're doing, let's write the rest of the code. The entire source script is available `at this link`_ as well.
 
 .. code-block:: python
 
@@ -124,3 +121,4 @@ Now, let's talk about `some choices for our central widget design`_.
 .. _`Follow these installation instructions`: http://python-guide-pt-br.readthedocs.io/en/latest/starting/installation/
 .. _`Python 2`: https://pythonclock.org/
 .. _`turn to Google`: https://stackoverflow.com/questions/6318156/adding-python-path-on-windows-7
+.. _`at this link`: https://github.com/benhoff/blog/blob/master/scripts/pyqt-hello-world.py

@@ -1,6 +1,7 @@
 import sys
 from PyQt5 import QtCore, QtWidgets
 
+
 def main():
     # We need to make the QApplication before our QMainWindow
     # We also need to pass in our system argument values (sys.argv)

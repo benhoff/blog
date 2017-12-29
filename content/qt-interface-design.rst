@@ -7,7 +7,7 @@ Qt Interface Design
 :summary: Reviewing types of interface design for Qt
 :slug: qt-interface-design
 
-OK, so we've got a `hello world gui app`_ running, now we need to design our application. So let's talk about some general desktop GUI design. You might have used a lot of GUI applications, but you probably never noticed their design. Especially (and super ironically) if it was done well. As a fun exercise, if someone asked you to design a web browser right now, what would your interface look like? 
+As part of our `PyQt Tutorial series`_, we've got a `hello world gui app`_ running. Now we need to design our application. So let's talk about some general desktop GUI design. You might have used a lot of GUI applications, but you probably never noticed their design. Especially (and super ironically) if it was done well. As a fun exercise, if someone asked you to design a web browser right now, what would your interface look like? 
 
 If you're stumped, don't worry. A lot of people have thought about this before and have ideas. Three main ones in fact.
 
@@ -22,11 +22,13 @@ In a Single Document Interface, there's only a single window for each instance o
 
 .. image:: {filename}/images/libreoffice-snap.png
 
-Each document, or application, that gets opened get's it's own window. The window management is done by the native Desktop Environment.
+Each document, or application, that's opened gets it's own window. The window management is done by the native Desktop Environment.
 
-I'd recommend a single document interface for most GUIs as long as the functionality is simple. Make sure that when you're designing them that pulling up multiple instances won't lock up similar resources (ports, databases, files, etc.).
+I'd recommend a single document interface for most GUIs as long as the functionality is simple. Make sure that when you're designing your gui that pulling up multiple instances won't lock up resources (ports, databases, files, etc.).
 
-For using this in PyQt, well we're pretty much done with our hello world example. The only thing we need to do is add some content and organize it. I typically subclass a ``QWidget`` and use ``QLayout`` with ``QWidget.setLayout`` function to group things logically. ``QLayout`` has some subclasses that can be used to logically arrange things. A favorite is to us ``QVBoxLayout`` or ``QHBoxLayout`` since things kind of mostly resize correctly in Qt.
+.. TODO add in some example code of a single document design.
+
+Single document design in PyQt is the default. We've pretty much got it going in our hello world example. The only thing we need to do is add some content to our Gui and organize it. I typically subclass a ``QWidget`` and use ``QLayout`` with ``QWidget.setLayout`` function to group things logically. ``QLayout`` has some subclasses that can be used to logically arrange things. A favorite is to us ``QVBoxLayout`` or ``QHBoxLayout`` since things kind of mostly resize correctly in Qt.
 
 As I mentioned before, Single Document Interface programs are easy to program. A couple of cons however include the fact that it may be challenging to jam advanced functionality into them. Depending on the design or back end, if your user pulls up too instances, it can choke the system resources.
 
@@ -70,3 +72,4 @@ As I wrap up, I'd like to recognize this excellent blog post on `User Interface 
 .. _`User Interface Design for Business Applications`: https://richnewman.wordpress.com/category/tabbed-document-interface/
 .. _`wikipedia`: https://en.wikipedia.org/wiki/Multiple_document_interface
 .. _`Micrsoft Developers Network`: https://msdn.microsoft.com/en-us/library/ms997505.aspx?ranMID=24542&ranEAID=TnL5HPStwNw&ranSiteID=TnL5HPStwNw-L9gN68KGHNTwS1y_SVKSfw&tduid=(0b68db1eaba6ffcc15fac5f2d8ab4540)(256380)(2459594)(TnL5HPStwNw-L9gN68KGHNTwS1y_SVKSfw)() 
+.. _`PyQt Tutorial series`: {filename}/pyqt-tutorial.rst

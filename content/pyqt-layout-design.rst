@@ -8,7 +8,7 @@ PyQt Layout Design
 :summary: Let's work on creating a single interface design face recognition application.
 
 
-So we've built a `Hello World`_ GUI application and gone through some basic `Interface Design`_ options. Let's implement the first type of Interface, a Single Document Interface. We're going to create a Face Recognition Application, but since I'd like to focus on the PyQt GUI development process, the actual face recognition part will be separate from this set of tutorials.
+As part of our `PyQt Tutorial series`_ we've built a `Hello World`_ GUI application and gone through some basic `Interface Design`_ options. Let's implement the first type of Interface, a Single Document Interface. We're going to create a Face Recognition Application, but since I'd like to focus on the PyQt GUI development process, the actual face recognition part will be separate from this set of tutorials.
 
 So let's install a face recognition ready widget.
 
@@ -147,3 +147,4 @@ There's only one problem. If we click that push button, nothing happens. What's 
 .. _`Interface Design`: {filename}/qt-interface-design.rst
 .. _`this blog post`: {filename}/face-detection-in-pyqt.rst
 .. _`Signals and Slots`: {filename}/pyqt-signals-slots.rst
+.. _`PyQt Tutorial series`: {filename}/pyqt-tutorial.rst

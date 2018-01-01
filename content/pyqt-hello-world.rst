@@ -9,6 +9,8 @@ PyQt Hello World Application
 Getting Started
 ---------------
 
+This is the first step in the `PyQt Tutorial series`_! Welcome!
+
 We're going to start with a hello world application, as sometimes getting everything installed and working correctly can be an emotionally terrifying experience. Just ask me. I've done software before.
 
 So starting from nothing.
@@ -43,8 +45,8 @@ We're going to create and activate a virtual environment, so that your global si
 
 .. code-block:: console
 
-        $ python -m venv venv
-        $ source venv/bin/activate
+        $ python -m venv <DIR>
+        $ source <DIR>/bin/activate
 
 Install PyQt5
 -------------
@@ -55,10 +57,10 @@ Right, now that our virtual environment is activated, let's install PyQt.
 
         $ pip install PyQt5
 
-Write Boilerplate Code
-----------------------
+Build the Framework
+-------------------
 
-Now, fire up your favorite text editor, it's time to start programming. We'll create a file name `__main__.py` practice a couple of nicety's: the creation of a main loop, and a standard script sequence
+Now, fire up your favorite text editor, it's time to start programming. Create a file named `__main__.py` and add the following to it.
 
 .. code-block:: python
 
@@ -73,7 +75,9 @@ Now, fire up your favorite text editor, it's time to start programming. We'll cr
 Write PyQt Specific Code
 ------------------------
 
-Now, in our main function, we're going to create an instances of `QApplication`_ and `QMainWindow`_. I'd recommend reading the `documentation`_ on ``QApplication``, especially the section with the *main areas of responsibility*. The TLDR on ``QApplication`` responsibilities:
+Now, in our main function, we're going to create an instances of `QApplication`_ and `QMainWindow`_. I'd recommend reading the `documentation`_ on ``QApplication``, especially the section with the *main areas of responsibility*. 
+
+If you don't get there, the TLDR on ``QApplication`` responsibilities:
 
 - event handling
 - main settings
@@ -81,6 +85,7 @@ Now, in our main function, we're going to create an instances of `QApplication`_
 ``QMainWindow`` is a magical class. It gives a lot of normal desktop interface aspects that you've come to expect, such as a menu bar, tool bars, and status bars... *for free*. Again, the `documentation is awesome`_, but check out the below figure to get a hint for the types of functionality that are integrated into the ``QMainWindow`` class.
 
 .. figure:: http://doc.qt.io/qt-5/images/mainwindowlayout.png
+  :align: center
 
   Notice that the Menu Bar and Status Bar are tied to QMainWindow. We'll come back to that.
 
@@ -123,3 +128,4 @@ The next step is to talk about `choices for our central widget design`_, but if 
 .. _`turn to Google`: https://stackoverflow.com/questions/6318156/adding-python-path-on-windows-7
 .. _`at this link`: https://github.com/benhoff/blog/blob/master/scripts/pyqt-hello-world.py
 .. _`this high level overview`: {filename}/pyqt-tutorial.rst
+.. _`PyQt Tutorial series`: {filename}/pyqt-tutorial.rst

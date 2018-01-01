@@ -67,9 +67,16 @@ As been hinted at several times already, there's always the option to mix these 
 
 As I wrap up, I'd like to recognize this excellent blog post on `User Interface Design for Business Applications`_. I default to Single Document Interfaces as much as possible until complexity gets me, and then I switch to a tabbed interface. But the aforementioned post helped me ensure I wasn't overlooking a design while I was crafting my latest creation.
 
+Wrap Up
+-------
+
+Now that we know a couple of different design patterns, let's go ahead and apply them! Which is exactly what we'll do in the next section of where we look at `layout management in PyQt`_. Or, if you'd like to jump around, `go to the top level index`_ and jump to the section of the tutorial that interests you most.
+
 
 .. _`hello world gui app`: {filename}/pyqt-hello-world.rst
 .. _`User Interface Design for Business Applications`: https://richnewman.wordpress.com/category/tabbed-document-interface/
 .. _`wikipedia`: https://en.wikipedia.org/wiki/Multiple_document_interface
 .. _`Micrsoft Developers Network`: https://msdn.microsoft.com/en-us/library/ms997505.aspx?ranMID=24542&ranEAID=TnL5HPStwNw&ranSiteID=TnL5HPStwNw-L9gN68KGHNTwS1y_SVKSfw&tduid=(0b68db1eaba6ffcc15fac5f2d8ab4540)(256380)(2459594)(TnL5HPStwNw-L9gN68KGHNTwS1y_SVKSfw)() 
 .. _`PyQt Tutorial series`: {filename}/pyqt-tutorial.rst
+.. _`layout management in PyQt`: {filename}/pyqt-layout-design.rst
+.. _`go to the top level index`: {filename}/pyqt-tutorial.rst

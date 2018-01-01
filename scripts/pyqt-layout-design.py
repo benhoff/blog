@@ -3,6 +3,7 @@ from PyQt5 import QtCore, QtWidgets
 
 from facerecog import MainWidget, get_haarcascade_filepath
 
+
 def main():
     # We need to make the QApplication before our QMainWindow
     # We also need to pass in our system argument values (sys.argv)

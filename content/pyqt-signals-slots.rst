@@ -7,13 +7,13 @@ PyQt Signals and Slots
 :slug: pyqt-signals-slots
 :summary: Figuring out how to use signals and slots
 
-Ok, so we've gone through some basic `layout management`_ in addition to a conversation about some `interface design`_, now when I click buttons I want things to happen!
+As part of our `PyQt Tutorial series`_, we've gone through some basic `layout management`_ in addition to a conversation about some `interface design`_... but now when I click buttons I want things to happen!
 
 In order to achieve that goal, we're going to have to learn about signals and slots.
 
 Let me let you in on a little secret. Signals and slots? They're magical. Seriously, they are pretty cool.
 
-Let's go back to our face recognition example. This time since we know layouts due to the `layout management`_ post, we're going to build our own widget so that we can better hook up our signals and slots.
+Let's go back to our face recognition example. If you're jumping around, you can catch up to the source code that we're starting at `here`_. This time, since we know layouts due to the `layout management`_ post, we're going to build our own widget so that we can better hook up our signals and slots.
 
 This is going to track closely to the `face detection post`_ where I originally created this widget.
 
@@ -146,3 +146,5 @@ That should be enough to get you started. Be sure to check out the `PyQt documen
 .. _`know layouts`: {filename}/pyqt-layout-design.rst
 .. _`interface design`: {filename}/qt-interface-design.rst
 .. _`face detection post`: {filename}/face-detection-in-pyqt.rst
+.. _`PyQt Tutorial series`: {filename}/pyqt-tutorial.rst
+.. _`here`: https://github.com/benhoff/blog/blob/master/scripts/pyqt-layout-design.py

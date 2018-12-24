@@ -1,3 +1,6 @@
 [submodule "plugins/ipynb"]
 	path = plugins/ipynb
 	url = git://github.com/danielfrg/pelican-ipynb.git
+[submodule "themes/pelican-blue"]
+	path = themes/pelican-blue
+	url = https://github.com/Parbhat/pelican-blue.git

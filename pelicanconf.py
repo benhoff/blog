@@ -17,7 +17,7 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-THEME = 'themes/base_theme'
+THEME = 'themes/pelican-blue'
 
 LINKS = (('Community', 'https://community.benhoff.net'),
          ('Github', 'https://github.com/benhoff'),

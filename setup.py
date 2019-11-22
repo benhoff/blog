@@ -14,11 +14,12 @@ setup(
         'typogrify',
         'jupyter',
         'Markdown',
+        'ghp-import',
+        'wheel',
         ],
 
     extras_require={
         'dev': ['flake8', 'twine'],
         'vim': ['jedi',],
-        'push': ['ghp-import', 'wheel'],
     }
 )

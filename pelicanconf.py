@@ -29,7 +29,7 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 MENUITEMS = [('Archives', '%s/archives.html' % SITEURL),
-             ('Community', 'https:community.benhoff.net')]
+             ('Community', 'https://community.benhoff.net')]
 
 TYPOGRIFY = True
 STATIC_PATHS = ['extra/CNAME', 'images', 'extra/favicon.ico']

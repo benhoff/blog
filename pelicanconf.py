@@ -32,9 +32,10 @@ MENUITEMS = [('Archives', '%s/archives.html' % SITEURL),
              ('Community', 'https://community.benhoff.net')]
 
 TYPOGRIFY = True
-STATIC_PATHS = ['extra/CNAME', 'images', 'extra/favicon.ico']
+STATIC_PATHS = ['extra/CNAME', 'images', 'extra/favicon.ico', 'extra/ads.txt']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
-                       'extra/favicon.ico': {'path': 'favicon.ico'}}
+                       'extra/favicon.ico': {'path': 'favicon.ico'},
+                       'extra/ads.txt': {'path': 'ads.txt'},}
 
 
 # pelican-ipynb settings

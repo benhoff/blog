@@ -58,7 +58,7 @@ Blogs
 
 Blogs at the end of the day are just content and can say anything. One of my favorite posts so far has been the `Beaglebone Black`_ post, where I walked through the steps and frustrations of flashing a Beaglebone black. While I was originally trying to install OpenVPN on the Beaglebone and ended up not doing that, the post serves as a reference point when I (invariably) reflash another one. But I've got some interesting tidbits and posts that should save me some time... next time.
 
-.. _`Beaglebone Black`: {filename}/flashing-beaglebone.rst
+.. _`Beaglebone Black`: {static}/flashing-beaglebone.rst
 
 Closing Thoughts
 ----------------

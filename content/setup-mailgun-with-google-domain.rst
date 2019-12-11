@@ -18,7 +18,7 @@ Mailgun is going to give you 4 steps. We will need to go `Google Domains`_. Clic
 
 Once you're there, scroll all the way down to the section that is titled *Custom resource records*. It'll look something like this:
 
-.. image:: {filename}/images/google-domain-1.png
+.. image:: {static}/images/google-domain-1.png
   :width: 400
   :height: 100
 
@@ -46,7 +46,7 @@ Step 4 is wait for your domain to verify. In my experience, it was almost instan
 
 In the end it should look something (although not exactly) like this.
 
-.. image:: {filename}/images/google-domain-2.png
+.. image:: {static}/images/google-domain-2.png
   :width: 600
   :height: 424
 

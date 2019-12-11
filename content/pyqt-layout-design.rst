@@ -55,7 +55,7 @@ If you're interested in seeing the coding going on behind the face recognition p
       main()
 
 
-.. image:: {filename}/images/face-recognition-success.png
+.. image:: {static}/images/face-recognition-success.png
   :align: center
 
 Obviously this code isn't the whole story to the GUI development. But it demonstrates an important fact about Qt desktop GUI framework. Everything that the end user interfaces with is a widget. So in this case, since we already have a ready made widget, we can plug it in and send our user on their merry way.
@@ -124,7 +124,7 @@ Let's use a layout to stack a couple of widgets on top of each other. We'll do t
 
 This is the resulting gui for the above code, showing all of the widgets stacked vertically.
 
-.. image:: {filename}/images/pyqt-layout-example.png
+.. image:: {static}/images/pyqt-layout-example.png
   :align: center
 
 We could also use a grid layout. The API for that is a little different. Whenever we add a widget, we need to pass in the row and the column. I'm going to do this using key word arguments so that you can see what is going on. If we remove the ``row`` and ``column`` key word arguments, this would still be valid code, as these are the positional arguments as well.
@@ -141,7 +141,7 @@ We could also use a grid layout. The API for that is a little different. Wheneve
 
 Below, you can see the change in the appearance of our GUI with the above layout changes.
 
-.. image:: {filename}/images/pyqt-layout-example-2.png
+.. image:: {static}/images/pyqt-layout-example-2.png
   :align: center
 
 Layouts are a powerful way to add more widgets and control how those new widgets look in our GUI, so don't be afraid to use them!
@@ -154,11 +154,11 @@ You can catch the source code for the tutorial up to this point `here`_.
 There's only one problem with our GUI currently. If we click that push button, nothing happens. What's up with that? Well we need to connect our signals and slots together. Check out how to do that, in the `Signals and Slots`_ post. Or, if you're already familiar with how signals and slots work, feel free to skip ahead using `this index`_ of the entire tutorial.
 
 .. _`check it out`: http://doc.qt.io/qt-5/layout.html
-.. _`Hello World`: {filename}/pyqt-hello-world.rst
-.. _`Interface Design`: {filename}/qt-interface-design.rst
-.. _`this blog post`: {filename}/face-detection-in-pyqt.rst
-.. _`Signals and Slots`: {filename}/pyqt-signals-slots.rst
-.. _`PyQt Tutorial series`: {filename}/pyqt-tutorial.rst
-.. _`this index`: {filename}/pyqt-tutorial.rst
+.. _`Hello World`: {static}/pyqt-hello-world.rst
+.. _`Interface Design`: {static}/qt-interface-design.rst
+.. _`this blog post`: {static}/face-detection-in-pyqt.rst
+.. _`Signals and Slots`: {static}/pyqt-signals-slots.rst
+.. _`PyQt Tutorial series`: {static}/pyqt-tutorial.rst
+.. _`this index`: {static}/pyqt-tutorial.rst
 .. _`here`: https://github.com/benhoff/blog/blob/master/scripts/pyqt-layout-design.py
 .. _`this link`: https://github.com/benhoff/blog/blob/master/scripts/pyqt-hello-world.py

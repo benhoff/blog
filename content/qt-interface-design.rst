@@ -20,7 +20,7 @@ Single Document Interfaces
 
 In a Single Document Interface, there's only a single window for each instance of the application. LibreOffice Writer, Microsoft Word, and most other word processors share this design.
 
-.. image:: {filename}/images/libreoffice-snap.png
+.. image:: {static}/images/libreoffice-snap.png
 
 Each document, or application, that's opened gets it's own window. The window management is done by the native Desktop Environment.
 
@@ -39,7 +39,7 @@ Tabbed Document Interfaces
 
 Tabbed Document Interfaces are an extension of the Single Document Interface. Earlier when I asked what you might use to build a web browser... Well if you're on desktop, you probably thought of a tabbed interface. It's the most common.
 
-.. image:: {filename}/images/chrome-snap.png
+.. image:: {static}/images/chrome-snap.png
 
 I'd recommend tabbed document interfaces for anything more complicated than a single page.
 
@@ -73,10 +73,10 @@ Wrap Up
 Now that we know a couple of different design patterns, let's go ahead and apply them! Which is exactly what we'll do in the next section of where we look at `layout management in PyQt`_. Or, if you'd like to jump around, `go to the top level index`_ and jump to the section of the tutorial that interests you most.
 
 
-.. _`hello world gui app`: {filename}/pyqt-hello-world.rst
+.. _`hello world gui app`: {static}/pyqt-hello-world.rst
 .. _`User Interface Design for Business Applications`: https://richnewman.wordpress.com/category/tabbed-document-interface/
 .. _`wikipedia`: https://en.wikipedia.org/wiki/Multiple_document_interface
 .. _`Micrsoft Developers Network`: https://msdn.microsoft.com/en-us/library/ms997505.aspx?ranMID=24542&ranEAID=TnL5HPStwNw&ranSiteID=TnL5HPStwNw-L9gN68KGHNTwS1y_SVKSfw&tduid=(0b68db1eaba6ffcc15fac5f2d8ab4540)(256380)(2459594)(TnL5HPStwNw-L9gN68KGHNTwS1y_SVKSfw)() 
-.. _`PyQt Tutorial series`: {filename}/pyqt-tutorial.rst
-.. _`layout management in PyQt`: {filename}/pyqt-layout-design.rst
-.. _`go to the top level index`: {filename}/pyqt-tutorial.rst
+.. _`PyQt Tutorial series`: {static}/pyqt-tutorial.rst
+.. _`layout management in PyQt`: {static}/pyqt-layout-design.rst
+.. _`go to the top level index`: {static}/pyqt-tutorial.rst

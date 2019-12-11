@@ -142,9 +142,9 @@ That should be enough to get you started. Be sure to check out the `PyQt documen
 .. _`QComboBox signal documentation`: http://doc.qt.io/qt-5/qcombobox.html
 .. _`push button documentation`: http://doc.qt.io/qt-5/qabstractbutton.html#signals
 .. _`documentation states`: http://doc.qt.io/qt-5/signalsandslots.html
-.. _`layout management`: {filename}/pyqt-layout-design.rst
-.. _`know layouts`: {filename}/pyqt-layout-design.rst
-.. _`interface design`: {filename}/qt-interface-design.rst
-.. _`face detection post`: {filename}/face-detection-in-pyqt.rst
-.. _`PyQt Tutorial series`: {filename}/pyqt-tutorial.rst
+.. _`layout management`: {static}/pyqt-layout-design.rst
+.. _`know layouts`: {static}/pyqt-layout-design.rst
+.. _`interface design`: {static}/qt-interface-design.rst
+.. _`face detection post`: {static}/face-detection-in-pyqt.rst
+.. _`PyQt Tutorial series`: {static}/pyqt-tutorial.rst
 .. _`here`: https://github.com/benhoff/blog/blob/master/scripts/pyqt-layout-design.py

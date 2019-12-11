@@ -198,7 +198,7 @@ I'll distribute this out on pypi so you can install it eventually.
 		main(cascade_filepath)
 
 
-.. image:: {filename}/images/face-recognition-success.png
+.. image:: {static}/images/face-recognition-success.png
 
 Success!
 

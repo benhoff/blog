@@ -11,6 +11,8 @@ As part of that vision, the CVAT platform needs to integrate in some of the top 
 
 One important thing from a systems perspective is to separate out your resources, so you don't risk breaking your entire system and you can scale different pieces at different rates. So the model integration really needed to be of the microservices brand. Enter stage left: Tensorflow serving.
 
+Tensorflow serving dockerizes models and allows them to be served via REST API or gRPC. So you can have a fat GPU on a separate server from the CVAT instance, plugging away, training the best inference possible. This is perfect for CVAT's use case.
+
 There's only one slight hangup. Tensorflow has recently transitioned into Tensorflow 2.0, an API breaking upgrade. This has (as API breaks always do), thrown the entire ecosystem into chaos. But it has shown some light on an interesting thing.
 
 Tensorflow Serving is Dead. Or at least, not being actively maintained.

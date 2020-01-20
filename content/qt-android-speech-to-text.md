@@ -6,9 +6,11 @@ Authors: Ben Hoff
 Summary: Getting Speech to Text and Text to Speech to work in Android
 
 
-This is the blog post that I wish I would have had about two weeks ago. You can totally get Qt/QML to work with Android's Speech to Text and Text to Speech API's builtin, but it ain't going to be easy. So let's get started.
+This is the blog post that I wish I would have had about two weeks ago. You can totally get Qt/QML to work with Android's Speech to Text and Text to Speech API's, but it isn't easy. So let's get started.
 
-First we're going to need someway to trigger a listen and display some text. So we'll use a button and a text field to show our results. And before you ask, is this app going to win any design awards? No, it certainly won't.
+First we're going to need someway to trigger a listen and display some text. So we'll use a button to trigger and a text field to show our results.
+
+Before you ask, is this app going to win any design awards? No, it certainly won't.
 
 ```
 // main.qml
@@ -50,7 +52,7 @@ Window {
 
 ```
 
-Brutal and efficent. Ok, we need to get access to our objects on the C++ side. We could probably talk for some time about C++/QML integration, but this isn't the blog for it.
+Brutal and efficent. Ok, we need to get access to our QML objects on the C++ side. We could probably talk for some time about C++/QML integration, but this isn't the blog for it.
 
 
 ``` cpp
@@ -103,18 +105,26 @@ public slots:
     // End ----- slots that trigger actions in java
 
 signals:
+    // ---- Our text to emit to the QML side using Qt signals
+
     void recognized_final_speech(const QString &text);
     void recognized_partial_speech(const QString &text);
 
+    // End ---- Our text to emit to the QML side using Qt signals
+
 private:
+    // Since we have to use static to interface with the Java side,
+    // we're going to use a singleton pattern to make this happen.
     static AndroidIntegration *this_pointer;
 
 #ifdef Q_OS_ANDROID
     QAndroidJniObject my_activity;
 
     // ------ These are Java methods that will be redirected to C++
+
     static void emit_final_text(JNIEnv *env, jobject thiz, jstring final_text);
     static void emit_partial_text(JNIEnv *env, jobject thiz, jstring partial_text);
+
     // End ------ of Java methods that will be redirected to C++
 
 #endif

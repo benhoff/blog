@@ -122,21 +122,24 @@ private:
 };
 ```
 
-So we've got our C++ and QML side mostly stubbed out. Now let's work on the Java/Android side. This gets a little messy for three reasons. The first reason is that in order to have a clean user experience (I.e, not have the native/third-party Speech to Text dialogue pop up for speech recognition) the Android Speech Recognition classes have to be created and run on the Android UI thread. The second piece is that the class that interacts with the results of the speech recognition (`RecognitionListener`) is a Java interface/Abstract class and thus must be subclassed (or implemented) in Java language. The third piece is that we've got to contend with the fact that this is a Qt/QML application, not a native Android one. So we're going to have to subclass `QtActivity` and use that.
+So we've got our C++ and QML side mostly stubbed out. Now let's work on the Java/Android side. This gets a little messy for three reasons. The first reason is that in order to have a clean user experience (I.e, not have the native Speech to Text dialogue pop up for speech recognition) the Android Speech Recognition classes have to be created and run on the Android UI thread. The second piece is that the class that interacts with the results of the speech recognition (`RecognitionListener`) is a Java interface/Abstract class and thus must be subclassed (or implemented) in Java. The third piece is that we've got to contend with the fact that this is a Qt/QML application, not a native Android one. So we're going to have to subclass `QtActivity` and we'll make use of the `runOnUiThread` method of `QtActivity` to help address the first problem.
 
 Three Issues:
-1. Android SpeechRecognizer must be run on the Android UI Thread
-2. The RecognitionListener is an interface that has to be implemented
 3. We're using Qt/QML and we need to interface back to the C++/QML side
+2. The RecognitionListener is an interface that has to be implemented
+1. Android SpeechRecognizer must be run on the Android UI Thread
 
 Three Fixes:
+3. Subclass the `QtActivity` class
 1. Implement the `Runnable` interface so we have something that we can pass to the `runOnUiThread` method
 2. Implement a `RecognitionListener`
-3. Subclass the `QtActivity` class, and then build out the interfaces
 
-Let's start with number 2 first, our `RecognitionListener`. This is starting from the bottom up in our problem space, so we won't build out any code to interact directly with out QT/QML app in this one. Pure Android Java right now.
+Let's start with our `RecognitionListener`. This is starting from the bottom up in our problem space, so we won't build out any code to interact directly with out QT/QML app in this one. Pure Android Java right now.
 
 ``` java
+// TODO: define the path of this class
+
+
 // Implement the `RecognitionListener`
 public class QtSpeechRecognition implements RecognitionListener
 {
@@ -158,7 +161,7 @@ public class QtSpeechRecognition implements RecognitionListener
 		// Create the speech recognizer and set the listener to be this instance
         speech_recognizer = SpeechRecognizer.createSpeechRecognizer(activity);
         speech_recognizer.setRecognitionListener(this);
-
+Joe Manganiello'
 		// This intent is to recognize speech
         recognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
 
@@ -287,10 +290,12 @@ Ok, now let's create our `Runnable` infrastructure and our subclass of `QtActivi
 
 ``` java
 class CreateSpeechRecognizerOnUiThreadRunnable implements Runnable
-{}
+{
+}
 
 class StartListeningOnUiThreadRunnable implements Runnable
-{}
+{
+}
 
 public class MyQtActivity extends QtActivity
 {
@@ -298,30 +303,108 @@ public class MyQtActivity extends QtActivity
 	private StartListeningOnUiThreadRunnable listen_runnable;
 	private TextToSpeech;
 
-
 	@Override
 	public void onCreate(Bundle savedInstanceState)
-	{}
+	{
+	}
 
+	void set_recognition_instance(QtSpeechRecognition in_speech)
+	{
+	}
+
+	QtSpeechRecognition get_speech_recognition_instance()
+	{
+	}
 	@Override
 	public void onDestroy()
-	{}
+	{
+	}
 
 	public void start_listening()
-	{}
+	{
+	}
 
 	public void speak(String speakme)
-	{}
+	{
+	}
 
 	public void interrupt_speak()
-	{}
+	{
+	}
 
 	public static native void emit_text(String str);
 	public static native void partial_text(String str);
-
-
 }
+```
 
+I'm sure I get 0 points for Java style on this one, but my trick is always to first get something running, and then make it better.
+
+First we need to create the speech recognizer on the UI thread. The Android Speech Recognizer API requires passing in the activity. There's probably a cleaner way to do this, since the object is so short-lived, but I just pass it into the constructor, store a reference to it, and then use that reference in the `run` method.
+
+``` java
+
+class CreateSpeechRecognizerOnUiThreadRunnable implements Runnable
+{
+	private MyQtActivity my_qt_activity;
+
+	CreateSpeechRecognizerOnUiThreadRunnable(MyQtActivity in_activity)
+	{
+		my_qt_activity = in_activity;
+	}
+
+	@Override
+	public void run()
+	{
+		QtSpeechRecognition qt_speech_recognition = QtSpeechRecognition(this.my_qt_activity);
+		my_qt_activity.set_recognition_instance(qt_speech_recognition);
+	}
+}
+```
+Next we're going to define a little more long lived object that we can use to call the speech recognition repeatadly.
+
+``` java
+
+class StartListeningOnUiThreadRunnable implements Runnable
+{
+	private MyQtActivity my_qt_activity;
+
+	StartListeningOnUiThreadRunnable(MyQtActivity in_activity)
+	{
+		my_qt_activity = in_activity;
+	}
+
+	@Override
+	public void run()
+	{
+		my_qt_activity.get_speech_recognition_instance().start_listening();
+	}
+}
+```
+
+That's it, now let's just create those instances.
+
+``` java
+
+public class MyQtActivity extends QtActivity
+{
+	private QtSpeechRecognition qt_speech_recog;
+	private StartListeningOnUiThreadRunnable listen_runnable;
+	private TextToSpeech;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		CreateSpeechRecognizerOnUiThreadRunnable create_runnable = new CreateSpeechRecognizerOnUiThreadRunnable(this);
+		runOnUiThread(create_runnable);
+		listen_runnable = new StartListeningOnUiThreadRunnable(this);
+	}
+
+	public void start_listening()
+	{
+		runOnUiThread(listen_runnable);
+	}
 
 ```
 
+This finishes out the stubs for our Android code.

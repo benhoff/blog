@@ -81,7 +81,8 @@ int main(int argc, char *argv[])
 }
 ```
 
-Alright we need a C++ object to hook up to the Java now. Also we're going to be doing some Java programming, so you need some light experience in QML, C++, and Java. At the end of this blog post, you'll be a polyglot, congrats! In order to integrate with the Java Native Interface, a lot of this stuff needs to be static. I was on (self-imposed) deadline while I was working on this stuff, so I didn't dive into the details of *why* it needs to be wrapped in static methods, but if you know, feel free to drop a comment below.
+Alright we need a C++ object to hook up to the Java now.  This object is going to interface with our Java code (both ways!) and provide some signals that we're going to use in our `main.cpp` file to talk to the QML. This is the workhorse our our Qt code.
+
 
 ``` cpp
 // androidintegration.h
@@ -121,6 +122,206 @@ private:
 };
 ```
 
-Let's just take stock for a minute. Because there's a lot of stuff going on. We've defined the user interface using QML, we've gotten access to that QML in the `main.cpp` file, and we've defined a complete header file in C++ with static methods to recieve 
+So we've got our C++ and QML side mostly stubbed out. Now let's work on the Java/Android side. This gets a little messy for three reasons. The first reason is that in order to have a clean user experience (I.e, not have the native/third-party Speech to Text dialogue pop up for speech recognition) the Android Speech Recognition classes have to be created and run on the Android UI thread. The second piece is that the class that interacts with the results of the speech recognition (`RecognitionListener`) is a Java interface/Abstract class and thus must be subclassed (or implemented) in Java language. The third piece is that we've got to contend with the fact that this is a Qt/QML application, not a native Android one. So we're going to have to subclass `QtActivity` and use that.
 
+Three Issues:
+1. Android SpeechRecognizer must be run on the Android UI Thread
+2. The RecognitionListener is an interface that has to be implemented
+3. We're using Qt/QML and we need to interface back to the C++/QML side
+
+Three Fixes:
+1. Implement the `Runnable` interface so we have something that we can pass to the `runOnUiThread` method
+2. Implement a `RecognitionListener`
+3. Subclass the `QtActivity` class, and then build out the interfaces
+
+Let's start with number 2 first, our `RecognitionListener`. This is starting from the bottom up in our problem space, so we won't build out any code to interact directly with out QT/QML app in this one. Pure Android Java right now.
+
+``` java
+// Implement the `RecognitionListener`
+public class QtSpeechRecognition implements RecognitionListener
+{
+	// We're going to define how we want the Android to listen with this object
+    private Intent recognizer_intent;
+
+	// This is what's going to do the Speech to Text
+    private SpeechRecognizer speech_recognizer = null;
+
+	// NOTE: We haven't defined the `MyQtActivity` class yet
+    MyQtActivity my_qt_activity;
+
+	// Remember that we need the `SpeechRecognizer` to be created on the Android Thread
+    public MySpeechRecognition(MyQtActivity activity)
+    {
+		// Store a reference to the activity so that we can check the permissions
+        my_qt_activity = activity;
+
+		// Create the speech recognizer and set the listener to be this instance
+        speech_recognizer = SpeechRecognizer.createSpeechRecognizer(activity);
+        speech_recognizer.setRecognitionListener(this);
+
+		// This intent is to recognize speech
+        recognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+
+		// We're going to define how we want our recognizer to work. Going to use english, return partial results and return up to three results
+        recognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_PREFERENCE, "en-us");
+        recognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        recognizerIntent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 3);
+        recognizerIntent.putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true);
+    }
+
+	// This is our method to start the process
+    public void start_listening() {
+		// We need to make sure that we have the ability to record audio
+        String requiredPermission = Manifest.permission.RECORD_AUDIO;
+
+		// If we don't have permission, ask for it
+        if (my_activity.checkCallingOrSelfPermission(requiredPermission) == PackageManager.PERMISSION_DENIED) {
+			// Note that I think you can pass notes to the user to tell them why you need this permission,
+			// but it should be self evident?
+            my_activity.requestPermissions(new String[]{requiredPermission}, 101);
+        }
+
+        speech.startListening(recognizerIntent);
+    }
+
+	@Override
+	public void onPartialResults(Bundle arg0) {
+		ArrayList<String> matches = arg0.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
+		String text = matches.get(0);
+		System.out.println(text);
+		my_qt_activity.partial_text(text);
+	}
+
+	@Override
+	public void onResults(Bundle results) {
+		ArrayList<String> matches = results
+				.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
+		String text = matches.get(0);
+		my_qt_activity.emit_text(text);
+	}
+
+	@Override
+	public void onRmsChanged(float rmsdB) 
+	{
+		// Note that you could use this method to display back to the user how loud they are talking
+		// or if the microphone is picking up them talking.
+	}
+
+	// NOTE: we have to override the following methods otherwise the Android Java compilier will complain
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (speech != null) {
+            speech.destroy();
+        }
+    }
+
+    @Override
+    public void onBeginningOfSpeech() {
+     }
+
+     @Override
+     public void onBufferReceived(byte[] buffer) {
+     }
+
+     @Override
+     public void onEndOfSpeech() {
+        }
+
+	@Override
+	public void onError(int errorCode) {
+		String errorMessage = getErrorText(errorCode);
+	}
+
+	@Override
+	public void onEvent(int arg0, Bundle arg1) {
+	}
+
+	@Override
+	public void onReadyForSpeech(Bundle arg0) 
+	{
+	}
+
+	public static String getErrorText(int errorCode) {
+		String message;
+		switch (errorCode) {
+			case SpeechRecognizer.ERROR_AUDIO:
+				message = "Audio recording error";
+				break;
+			case SpeechRecognizer.ERROR_CLIENT:
+				message = "Client side error";
+				break;
+			case SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS:
+				message = "Insufficient permissions";
+				break;
+			case SpeechRecognizer.ERROR_NETWORK:
+				message = "Network error";
+				break;
+			case SpeechRecognizer.ERROR_NETWORK_TIMEOUT:
+				message = "Network timeout";
+				break;
+			case SpeechRecognizer.ERROR_NO_MATCH:
+				message = "No match";
+				break;
+			case SpeechRecognizer.ERROR_RECOGNIZER_BUSY:
+				message = "RecognitionService busy";
+				break;
+			case SpeechRecognizer.ERROR_SERVER:
+				message = "error from server";
+				break;
+			case SpeechRecognizer.ERROR_SPEECH_TIMEOUT:
+				message = "No speech input";
+				break;
+			default:
+				message = "Didn't understand, please try again.";
+				break;
+		}
+		return message;
+	}
+
+```
+
+Ok, now let's create our `Runnable` infrastructure and our subclass of `QtActivity`.
+
+
+``` java
+class CreateSpeechRecognizerOnUiThreadRunnable implements Runnable
+{}
+
+class StartListeningOnUiThreadRunnable implements Runnable
+{}
+
+public class MyQtActivity extends QtActivity
+{
+	private QtSpeechRecognition qt_speech_recog;
+	private StartListeningOnUiThreadRunnable listen_runnable;
+	private TextToSpeech;
+
+
+	@Override
+	public void onCreate(Bundle savedInstanceState)
+	{}
+
+	@Override
+	public void onDestroy()
+	{}
+
+	public void start_listening()
+	{}
+
+	public void speak(String speakme)
+	{}
+
+	public void interrupt_speak()
+	{}
+
+	public static native void emit_text(String str);
+	public static native void partial_text(String str);
+
+
+}
+
+
+```
 

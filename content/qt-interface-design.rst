@@ -22,15 +22,15 @@ In a Single Document Interface, there's only a single window for each instance o
 
 .. image:: {static}/images/libreoffice-snap.png
 
-Each document, or application, that's opened gets it's own window. The window management is done by the native Desktop Environment.
+Each document, or application, that's opened gets its own window. The window management is done by the native Desktop Environment.
 
 I'd recommend a single document interface for most GUIs as long as the functionality is simple. Make sure that when you're designing your gui that pulling up multiple instances won't lock up resources (ports, databases, files, etc.).
 
 .. TODO add in some example code of a single document design.
 
-Single document design in PyQt is the default. We've pretty much got it going in our hello world example. The only thing we need to do is add some content to our Gui and organize it. I typically subclass a ``QWidget`` and use ``QLayout`` with ``QWidget.setLayout`` function to group things logically. ``QLayout`` has some subclasses that can be used to logically arrange things. A favorite is to us ``QVBoxLayout`` or ``QHBoxLayout`` since things kind of mostly resize correctly in Qt.
+Single document design in PyQt is the default. We've pretty much got it going in our hello world example. The only thing we need to do is add some content to our Gui and organize it. I typically subclass a ``QWidget`` and use ``QLayout`` with ``QWidget.setLayout`` function to group things logically. ``QLayout`` has some subclasses that can be used to logically arrange things. A favorite is to use ``QVBoxLayout`` or ``QHBoxLayout`` since things kind of mostly resize correctly in Qt.
 
-As I mentioned before, Single Document Interface programs are easy to program. A couple of cons however include the fact that it may be challenging to jam advanced functionality into them. Depending on the design or back end, if your user pulls up too instances, it can choke the system resources.
+As I mentioned before, Single Document Interface programs are easy to program. A couple of cons however include the fact that it may be challenging to jam advanced functionality into them. Depending on the design or back end, if your user pulls up two instances, it can choke the system resources.
 
 So what do you do if your interfaces need to be more complicated? Let's look at a few alternatives.
 
@@ -43,7 +43,7 @@ Tabbed Document Interfaces are an extension of the Single Document Interface. Ea
 
 I'd recommend tabbed document interfaces for anything more complicated than a single page.
 
-Qt comes has a custom class to handle creating tabbed interfaces. ``QTabWidget`` and the ``QTabWidget.addWidget`` functionality are good spots to start. You can also make your own custom one looking at ``QTabBar``. I'll typically label the tabs logically and try to jam the most interesting/useful information in the left-most tabs (following the left to right reading pattern).
+Qt has a custom class to handle creating tabbed interfaces. ``QTabWidget`` and the ``QTabWidget.addWidget`` functionality are good spots to start. You can also make your own custom one looking at ``QTabBar``. I'll typically label the tabs logically and try to jam the most interesting/useful information in the left-most tabs (following the left to right reading pattern).
 
 I think the biggest con that I can think of off the top of my head for a Tabbed design is the inability to change to a single document interface to refer to a previous tab. Web browsers got rid of this limitation by allowing you to pull a tab into a new window. While I believe this can be done with Qt, it would take a large amount of coding to accomplish.
 
@@ -58,19 +58,19 @@ I'm not sure when the best time to use Multiple Document Interfaces would be. Th
 
 You can create an MDI in Qt using the ``QMdiArea`` and then adding windows using ``QMdiArea.addSubWindow``.
 
-I'd recommend checking out the `wikipedia`_ page on the topic. The `Micrsoft Developers Network`_ also has some documentation that might be of further use.
+I'd recommend checking out the `wikipedia`_ page on the topic. The `Microsoft Developers Network`_ also has some documentation that might be of further use.
 
 Mixed
 -----
 
-As been hinted at several times already, there's always the option to mix these main interfaces as much as possible. Keep in mind as well, that there is a lot of support for toolbars and dock widgets (check out the ``QMainWindow`` documentation). The Integrated Developer Environment (IDE) ``Spyder`` is a great example of using dock widgets to great effect. 
+As I've hinted at several times already, there's always the option to mix these main interfaces as much as possible. Keep in mind as well, that there is a lot of support for toolbars and dock widgets (check out the ``QMainWindow`` documentation). The Integrated Developer Environment (IDE) ``Spyder`` is a great example of using dock widgets to great effect. 
 
 As I wrap up, I'd like to recognize this excellent blog post on `User Interface Design for Business Applications`_. I default to Single Document Interfaces as much as possible until complexity gets me, and then I switch to a tabbed interface. But the aforementioned post helped me ensure I wasn't overlooking a design while I was crafting my latest creation.
 
 Wrap Up
 -------
 
-Now that we know a couple of different design patterns, let's go ahead and apply them! Which is exactly what we'll do in the next section of where we look at `layout management in PyQt`_. Or, if you'd like to jump around, `go to the top level index`_ and jump to the section of the tutorial that interests you most.
+Now that we know a couple of different design patterns, let's go ahead and apply them! Which is exactly what we'll do in the next section where we look at `layout management in PyQt`_. Or, if you'd like to jump around, `go to the top level index`_ and jump to the section of the tutorial that interests you most.
 
 
 .. _`hello world gui app`: {static}/pyqt-hello-world.rst

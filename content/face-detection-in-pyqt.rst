@@ -55,8 +55,8 @@ Awesome, now let's work on the facial detection.
 
 		def detect_faces(self, image):
 			# haarclassifiers work better in black and white
-			gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-			gray_image = cv2.equalizeHist(grey_image)
+			grey_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+			grey_image = cv2.equalizeHist(grey_image)
 
 			faces = self.classifier.detectMultiScale(grey_image, scaleFactor=1.3, minNeighbors=4, flags=cv2.CASCADE_SCALE_IMAGE, min_size=self._min_size)
 
@@ -87,7 +87,7 @@ If that sounds confusing, don't worry. The code isn't that long.
 
 			read, image = self.camera.read()
 			if read:
-				self.image_ready.emit(image)
+				self.image_data.emit(image)
 
 We need to extend our Face Detection as well. We'll make it a ``QWidget``, because we want to paint on it. We'll add a new method that converts our ndarray into a ``QImage``. The painting loop occasionally might be too slow, so we'll save the image to the class and call the ``update`` method at the end of the slot. We'll draw the rectangle on into the data using the ``cv2.rectangle`` method call.
 
@@ -107,7 +107,7 @@ We need to extend our Face Detection as well. We'll make it a ``QWidget``, becau
 			gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 			gray_image = cv2.equalizeHist(gray_image)
 
-			faces = self.classifier.detectMultiScale(gray_image, scaleFactor=1.3, minNeighbors=4, flags=cv2.CASCADE_SCALE_IMAGE, minSize=self._min_size)
+			faces = self.classifier.detectMultiScale(gray_image, scaleFactor=1.3, minNeighbors=4, flags=cv2.CASCADE_SCALE_IMAGE)
 
 			return faces
 
